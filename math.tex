@@ -1,0 +1,109 @@
+% preamble begin
+\documentclass[a4paper, 12pt]{article}
+\usepackage{amsmath}
+
+\author{WHK}
+\title{The Mathematical Typesetting}
+
+%body begin
+\begin{document}
+\maketitle
+\tableofcontents
+
+\section[SingleLiners]{SingleEq and I'll write some more for the sake of demon}
+Add $a$ squared and $b$ squared to get $c$ squared. %
+Or, using a more mathematical approach: $a^2 + b^2 = c^2$
+
+% a deliberate paragraph break
+\section[AnotherSingleLiners]{Example2}
+\TeX{} is pronounced as $\tau\epsilon\chi$\\
+100~m$^{3}$ of water\\ %Tilda is a NONBREAKABLE space
+This comes from my $\heartsuit$
+
+\section{BreakingBad}
+Add $a$ squared and $b$ squared to get $c$ squared. %
+Or, using a more mathematical approach
+\begin{equation}
+  a^2 + b^2 = c^2
+  \label{3.1} % Note Label is used for internal referencing
+  \tag{3.1} %Tag is actually displayed
+\end{equation} %
+Einstein says
+\begin{equation}
+  E = mc^2
+  \tag{3.2}
+  \label{clever}
+\end{equation}
+He didn't say
+\begin{equation}
+  1 + 1 = 3
+  \tag{dumb}
+\end{equation} %
+This is a reference to \eqref{clever}.
+
+\section{BreakingBadII}
+Add $a$ squared and $b$ squared to get $c$ squared. %
+Or, using a more mathematical approach
+\[ a^2 + b^2 = c^2 \] %
+Or you can type less for the same effect:
+\begin{equation*}
+  a^2 + b^2 = c^2
+\end{equation*}
+% note the the \[ \] syntactic sugar can't mix numbered and not numbered eqn
+
+\section{ContrastinStyle}
+This is text style: %
+$\lim_{n \to \infty} %\to is a right arrow
+\sum_{k=1}^n \frac{1}{k^2} %{k=1}^n denotes from 1 to n
+= \frac{\pi^2}{6}.$ %
+And this is display style:
+\[
+\lim_{n \to \infty} %\to is a right arrow
+\sum_{k=1}^n \frac{1}{k^2} %{k=1}^n denotes from 1 to n
+= \frac{\pi^2}{6}.
+\tag{3.3} %Expecting an error
+\]
+
+\section{Depth}
+A $d_{e_{e_p}}$ mathematical expression followed by %
+a $h^{i^{g^h}}$ expression. As opposed to a smahsed %
+\smash{$d_{e_{e_p}}$} expression followed by a %
+\smash{$h^{i^{g^h}}$} expression.
+% i.e. smash compresses height as needed.
+
+\section{MathMode}
+$\forall x \in \mathbf{R}: %mathbf, is mathboldfaced \in -> is element in
+\qquad x^2 \geq 0$ \\%qquad gives some spacing
+$x^2 \geq 0 \qquad \text{for all } x \in \mathbf{R}$
+
+\section{ComplexExpression}
+$p^3_{ij} \qquad m_\text{Knuth} \qquad %
+\sum_{k=1}^3 k \\
+a^x + y \neq a^{x+y} \qquad %
+e^{x^2} \neq {e^x}^2$
+
+% Deliberate paragraph
+$\sqrt{x} \Leftrightarrow x^{1/2}
+\quad \sqrt[3]{2} %opt para declares nth root
+\quad \sqrt{x^2 + \sqrt{y}}
+\quad \surd[x^2 + y^2]$
+
+$\Psi = v_1 \cdot v_2 \cdot \ldots
+\qquad n! = 1 \cdot 2 \cdot \cdots
+(n-1) \cdot n$
+
+$\underbrace{
+\overbrace{a+b+c}^6 \cdot
+\overbrace{d+e+f}^9}_\text{meaning of life} = 42$
+
+\[
+\lim_{x \to 0} \frac{\sin x}{x} =
+1
+\]
+
+
+
+
+
+
+\end{document}
