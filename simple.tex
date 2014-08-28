@@ -1,7 +1,45 @@
 % preamble start
 \documentclass{article}
-
+\usepackage{verbatim}
 % body start
 \begin{document}
 Small is beautiful
+
+%Example1 and purposefully using a paragraph break
+\ldots when Einstein %
+introduced his formula
+\begin{equation}
+  e = m \cdot c^2 \; , %What does a semicolon mean? -> gives a little bit of space
+\end{equation}
+
+which is at the same time the %
+most widely known and the least well understood physical formula.
+
+%Example 2; again we don't want to use \\, but rather have an empty line for a new paragraph
+\ldots from which follows Kirchoff's current law:
+\begin{equation}
+  \sum_{k=1}^{n} I_k = 0 \; .
+\end{equation}
+
+% a purposeful Paragraph indentation
+Kirchoff's voltage law can be derived \ldots
+
+%Example 3; again, a paragraph break. Note it's easy to introduce paragraph breaks unknowingly.
+\ldots which has several advantages.
+
+% Purposeful paragraph break
+\begin{equation}
+  I_D =I_F - I_R
+\end{equation}
+is the core of a very differnt transistor model. \ldots
+
+% Paragrmpah break
+\ldots quotation checkin ``hello `world'''
+\begin{comment}
+Finally understood difference between a blank line between texts vs
+\\:
+
+1. a blank line between texts makes a new paragraph (indented on left)
+2. a \\ simply is MY specification of cutting of the current paragraph (no indentation on left for the new line)
+\end{comment}
 \end{document}

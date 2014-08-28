@@ -1,0 +1,57 @@
+%preamble begin
+\documentclass[a4paper, 11pt]{article}
+
+\author{H.~Partl}
+\title{Minimalism}
+
+%body begin
+\begin{document}
+%generates the title
+\maketitle
+%insert the table of contents
+\tableofcontents
+
+\section{Some Interesting Words}
+Well, and here begins my article
+\section[ShortTitle]{TooLong to be included in the table of contents %
+so I'll cut it short}
+\ldots{} and here it ends %note purposeful space after ...
+\section{CrossReferencing}
+\ldots this is a reference to %
+\label{myLabel} %
+the current section \ref{myLabel} %
+on page \pageref{myLabel} \ldots
+
+\section{Itemize and Enumerate Mixed}
+\flushleft %left flush
+\begin{enumerate}
+% item for enum
+\item You can nest the list environments as you like:
+
+  \begin{itemize}
+  %item for itemize
+  \item But it might start to look silly.
+  \item[-] With a dash.
+  \end{itemize}
+
+\item Therefore remember:
+
+  \begin{description}
+  \item[Stupid] things will not become smart because they%
+    are in a list
+  \item[Smart] things, though, can be presented%
+    beautifully in a list.
+  \end{description}
+\end{enumerate}
+
+\section{Quotes}
+A typographical rule of thumb for the line length is:
+
+\begin{quote}
+  On average, no line should be longer than 66 characters.
+\end{quote}
+
+% Don't forget the curly braces to have a space after LaTeX
+This is why \LaTeX{} pages have such large borders by default and %
+also why multicolumn print is used in newspapers.
+\end{document}
