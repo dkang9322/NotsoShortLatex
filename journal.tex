@@ -54,4 +54,27 @@ A typographical rule of thumb for the line length is:
 % Don't forget the curly braces to have a space after LaTeX
 This is why \LaTeX{} pages have such large borders by default and %
 also why multicolumn print is used in newspapers.
+
+\section{Tables}
+\flushright
+\begin{tabular}{|r|l|}
+\hline
+7C0 & hexadecimal \\ %start a new line
+3700 & octal \\
+\cline{2-2} %Note that a line UNDER a row, has CLINE AFTER that row
+111000000 & binary \\
+
+\hline \hline %two consecutive \hline creates an empty space
+1984 & decimal \\
+\hline
+\end{tabular}
+
+\section{TableII}
+\flushleft
+\begin{tabular}{|p{4.7cm}|} %specifies to have a wrap-around
+\hline
+Welcome to Boxy's paragraph.
+We sincerely hope you'll all enjoy the show. \\% Note bc of 'p'option, wrap-around
+\hline %note hline requires a breakline BEFORE!
+\end{tabular}
 \end{document}
